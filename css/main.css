@@ -1,0 +1,67 @@
+.weather-app {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../assets/img/bg-weather.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.weather-app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.weather-app__header {
+  position: relative;
+  z-index: 1;
+}
+.weather-app__header .navbar {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.weather-app__content {
+  position: relative;
+  z-index: 1;
+  min-height: 80vh;
+}
+.weather-app__footer {
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+  background-color: white;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+.weather-app__footer small {
+  color: #666;
+}
+
+@media (max-width: 420px) {
+  .weather-app h1 {
+    font-size: 1.6rem;
+  }
+}
+.place-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.place-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background-color: rgb(225.4442622951, 237.2909836066, 254.7557377049);
+}
+.place-card__name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.place-card__temp {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+

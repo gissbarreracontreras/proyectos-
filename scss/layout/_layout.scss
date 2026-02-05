@@ -1,0 +1,51 @@
+.weather-app {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../assets/img/bg-weather.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: #e0dbdbe6;
+    z-index: 0;
+  }
+
+  &__header {
+    position: relative;
+    z-index: 1;
+
+    .navbar {
+      box-shadow: 0 2px 6px $card-shadow;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    min-height: 80vh;
+  }
+
+  &__footer {
+    position: relative;
+    z-index: 1;
+    margin-top: $space-lg;
+    background-color: white;
+    box-shadow: 0 -2px 6px $card-shadow;
+    font-size: 0.9rem;
+
+    small {
+      color: #666;
+    }
+  }
+}
+
+
+@media (max-width: 420px) {
+  .weather-app h1 {
+    font-size: 1.6rem;
+  }
+}
